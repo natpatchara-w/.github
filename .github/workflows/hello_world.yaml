@@ -13,8 +13,12 @@ jobs:
       - name: Test github actions
         run: |
           echo "Hello github action" 
-          echo "This is test for env: {{ env.test }}
-          echo "This is test for sum string: {{ env.test1 + ":" + env.test2 }}"
+          echo " --- "
+          echo "This is test for env:" 
+          echo {{ env.test }}
+          echo " --- "
+          echo "This is test for sum string: " 
+          echo {{ env.test1 + ":" + env.test2 }}
         env:
           test: "Hi from Environment"
           test1: "Hello"
