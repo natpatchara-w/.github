@@ -1,4 +1,5 @@
 name: Hello world action for github repo
+run-name: Hello world.
 
 on:
   push:
@@ -15,10 +16,10 @@ jobs:
           echo "Hello github action" 
           echo " --- "
           echo "This is test for env:" 
-          echo {{ env.test }}
+          echo ${{ env.test }}
           echo " --- "
           echo "This is test for sum string: " 
-          echo {{ env.test1 + ":" + env.test2 }}
+          echo ${{ env.test1 + ":" + env.test2 }}
         env:
           test: "Hi from Environment"
           test1: "Hello"
