@@ -1,0 +1,21 @@
+name: Hello world action for github repo
+
+on:
+  push:
+    branches: 
+      - main
+
+jobs:
+  helloworld:
+    name: Hello World
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test github actions
+        run: |
+          echo "Hello github action" 
+          echo "This is test for env: {{ env.test }}
+          echo "This is test for sum string: {{ env.test1 + ":" + env.test2 }}"
+        env:
+          test: "Hi from Environment"
+          test1: "Hello"
+          test2: "World"
